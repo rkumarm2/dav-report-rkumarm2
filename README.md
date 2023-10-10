@@ -2,12 +2,12 @@
 DAV report automation
 
 Six spreadsheet files with the name: 
-SEBH_DetailedDeviceDetails_DDMmmYYYY
-SEBH_ViewManagedDevices_DDMmmYYYY
-SECH_DetailedDeviceDetails_DDMmmYYYY
-SECH_ViewManagedDevices_DDMmmYYYY
-SETW_DetailedDeviceDetails_DDMmmYYYY
-SETW_ViewManagedDevices_DDMmmYYYY
+SEBH_DetailedDeviceDetails_DDMmmYYYY ,
+SEBH_ViewManagedDevices_DDMmmYYYY ,
+SECH_DetailedDeviceDetails_DDMmmYYY ,Y
+SECH_ViewManagedDevices_DDMmmYYYY ,
+SETW_DetailedDeviceDetails_DDMmmYYYY ,
+SETW_ViewManagedDevices_DDMmmYYYY 
 
 needs to be given as input.(The date, month in which these six reports were generated will be referred as generated date, generated month in the below description).
 
