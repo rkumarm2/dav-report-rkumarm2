@@ -1,19 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-#pip install tk
-#pip install xlsxwriter
-#pip install xlrd
-#pip install csv
-#pip install pandas
-#pip install csv
-#pip install openpyxl
-
-
-# In[]:
+pip install tk
+pip install xlsxwriter
+pip install xlrd
+pip install csv
+pip install pandas
+pip install csv
+pip install openpyxl
 
 
 import pandas as pd
@@ -38,9 +29,6 @@ from datetime import datetime
 from openpyxl import load_workbook
 from openpyxl.styles import Font
 import xlrd as xl
-
-
-# In[6]:
 
 
 root=tk.Tk()
@@ -95,8 +83,6 @@ instructions3 = tk.Label(root, text ="  ",font="Raleway")
 instructions3.grid(columnspan=3,column=0,row=11)
 
 
-
-# In[ ]:
 
 
 Month_list=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
