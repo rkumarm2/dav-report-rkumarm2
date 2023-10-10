@@ -4,7 +4,7 @@ DAV report automation
 Six spreadsheet files with the name: 
 SEBH_DetailedDeviceDetails_DDMmmYYYY ,
 SEBH_ViewManagedDevices_DDMmmYYYY ,
-SECH_DetailedDeviceDetails_DDMmmYYY ,Y
+SECH_DetailedDeviceDetails_DDMmmYYYY ,
 SECH_ViewManagedDevices_DDMmmYYYY ,
 SETW_DetailedDeviceDetails_DDMmmYYYY ,
 SETW_ViewManagedDevices_DDMmmYYYY 
