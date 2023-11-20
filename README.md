@@ -18,3 +18,6 @@ The generated month will always be considered, one needs to type the number of p
 If August is generated month, and May, June, July needs to be considered along with August, then 3 should be entered in months input text box.
 
 The output file will be downloaded in the "C:\Users\"username" folder.
+
+
+After executing the script for once, can remove the "pip install ..." lines in the code to avoid unnecessary time in code execution.
