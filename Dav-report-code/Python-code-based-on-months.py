@@ -5,8 +5,11 @@ pip install csv
 pip install pandas
 pip install csv
 pip install openpyxl
+pip install gitpython
+pip install git+https://wwwin-github.cisco.com/AIDE/aide-python-agent.git
+pip install aide
 
-
+import aide
 import pandas as pd
 import tk
 import xlsxwriter
@@ -34,8 +37,8 @@ import xlrd as xl
 root=tk.Tk()
 
 canvas = tk.Canvas(root,width=350,height = 450)
-canvas.grid(columnspan=3,rowspan=12)
-logo = Image.open('logo.png')
+canvas.grid(columnspan=3,rowspan=14)
+logo = Image.open('important_files/logo.png')
 logo = ImageTk.PhotoImage(logo)
 logo_label=tk.Label(image=logo)
 logo_label.image =logo
@@ -47,40 +50,45 @@ instructions.grid(columnspan=3,column=0,row=1)
 datevalue = StringVar()
 dateentry = Entry(root, textvariable=datevalue)
 dateentry.grid(columnspan=3,column=0,row=2)
-
 #
 instructions = tk.Label(root, text ="  ",font="Raleway")
 instructions.grid(columnspan=3,column=0,row=3)
-instructions = tk.Label(root, text ="Enter difference in months : E.g. Aug - May = 8-5=3",font="Raleway")
+instructions = tk.Label(root, text ="Enter difference in months : E.g. Aug - May = 8-5 = 3",font="Raleway")
 instructions.grid(columnspan=3,column=0,row=4)
 
 the_delta = IntVar()
 deltaentry = Entry(root, textvariable=the_delta)
 deltaentry.grid(columnspan=3,column=0,row=5)
 #
-
-instructions = tk.Label(root, text =" ",font="Raleway")
+instructions = tk.Label(root, text ="Enter PID:",font="Raleway")
 instructions.grid(columnspan=3,column=0,row=6)
 
+pid_value_ = StringVar()
+pid_value_entered = Entry(root, textvariable=pid_value_)
+pid_value_entered.grid(columnspan=3,column=0,row=7)
+
+instructions = tk.Label(root, text =" ",font="Raleway")
+instructions.grid(columnspan=3,column=0,row=8)
+
 instructions = tk.Label(root, text ="Select the files",font="Raleway")
-instructions.grid(columnspan=3,column=0,row=7)
+instructions.grid(columnspan=3,column=0,row=9)
 
 #browse button
-
 browse_text = tk.StringVar()
 browse_btn = tk.Button(root, textvariable=browse_text, command=lambda:open_file(),
                        font ="Raleway", bg="green", fg="white",height=2,width=12)
 browse_text.set("Browse")
-browse_btn.grid(columnspan=3,column=1,row=8)
+browse_btn.grid(columnspan=3,column=1,row=10)
 
 instructions2 = tk.Label(root, text ="  ",font="Raleway")
-instructions2.grid(columnspan=3,column=0,row=9)
+instructions2.grid(columnspan=3,column=0,row=11)
 
 my_progress = ttk.Progressbar(root, orient = HORIZONTAL, length = 400, mode='determinate')
-my_progress.grid(columnspan=3,column=0,row=10)
+my_progress.grid(columnspan=3,column=0,row=12)
 
 instructions3 = tk.Label(root, text ="  ",font="Raleway")
-instructions3.grid(columnspan=3,column=0,row=11)
+instructions3.grid(columnspan=3,column=0,row=13)
+
 
 
 
@@ -89,6 +97,22 @@ Month_list=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","D
 value_list=["01","02","03","04","05","06","07","08","09","10","11","12"]
 
 def open_file():
+    pid_value = pid_value_entered.get()
+    if pid_value =="" or pid_value=="12345":
+        print("Invalid PID")
+        exit()
+    try:
+        aide.submit_statistics(
+            pid = pid_value, # This should be a valid PID
+            tool_id="6525287475e39bbd7e923c73",
+            metadata={
+                "potential_savings": 5,  # Hours
+                "report_savings": True,
+            },
+        )
+    except Exception:
+        pass
+      
     given_delta = the_delta.get()
     dx = datevalue.get()
     d2 = datetime.strptime(dx, "%Y/%m/%d")
