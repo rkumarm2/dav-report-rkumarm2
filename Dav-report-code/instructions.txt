@@ -67,7 +67,7 @@ Use the Command prompt to install the aide-python-agent.
 Open command prompt and type:
 
 set PBR_VERSION=4.1.0 
-pip install <your aide-python-agent directory>
+pip install <in your aide-python-agent directory, where "setup" python file is present>
 
 NOTE:
 DO NOT TYPE "pip install aide" in command prompt, as it will download some other aide python moodule which was made by MIT college student in US.
@@ -84,7 +84,7 @@ Click on "CODE", then "Download ZIP"
 
 execute the python automation file, through cmd prompt:
 
-cd <The directory where DAV report python file is>
+cd <The directory where Python-code-based-on-months python file is, which is inside the downloaded folder.>
 
 
 
