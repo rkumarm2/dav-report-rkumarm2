@@ -79,6 +79,8 @@ DO NOT TYPE "pip install aide" in command prompt, as it will download some other
 ===================================================
 ===================================================
 
+Download the DAV-Report automation file from github, link: https://github.com/rkumarm2/dav-report-rkumarm2
+Click on "CODE", then "Download ZIP"
 
 execute the python automation file, through cmd prompt:
 
