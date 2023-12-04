@@ -21,8 +21,6 @@ from openpyxl.styles import Font
 
 
 
-#Charted communications
-
 Month_list=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 value_list=["01","02","03","04","05","06","07","08","09","10","11","12"]
 
@@ -31,7 +29,7 @@ def open_file():
         pid = "933120",
         tool_id="6525287475e39bbd7e923c73",
         metadata={
-            "potential_savings": 5,  # Hours
+            "potential_savings": 4,  # Hours
             "report_savings": True,
         },
     )
@@ -70,7 +68,7 @@ def open_file():
     status_coloumn_list=[]
     ip_address_list=[]
     
-#working on detailed devices list    
+    #working on detailed devices list    
     for i in csvfile_ddd_list:
         f = open(i)
         data = list(csv.reader(f))
@@ -124,7 +122,7 @@ def open_file():
         ip_address_list.append(ip_address)
         f.close()
       
-#working on view managed devices list
+    #working on view managed devices list
     
     for i in csvfile_vmd_list:
         my_progress['value']+=9
