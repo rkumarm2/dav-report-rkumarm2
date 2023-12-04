@@ -8,20 +8,23 @@ python --version
 ===================================================
 
 
-IF NOT INSTALLED, INSTALL IT USING:
+IF NOT INSTALLED, INSTALL IT (python 3.11) USING:
 
 For windows: https://www.python.org/ftp/python/3.11.5/python-3.11.5-amd64.exe (Tick the checkbox for "Add python 3.11 to Path" )
 
 For MAC:     https://www.python.org/ftp/python/3.11.5/python-3.11.5-macos11.pkg (Tick the checkbox for "Add python 3.11 to Path" )
 
 
+you can also use the latest and higher python version by going to : https://www.python.org/downloads/
+
+
 
 
 ===================================================
 ===================================================
 
 
-INSTALL LASTEST VERSION OF PIP:
+INSTALL LASTEST VERSION OF PIP IN COMMAND PROMPT:
 
 py -m pip install --upgrade pip
 
@@ -49,21 +52,26 @@ pip3 install openpyxl
 INSTALL CISCO'S OFFICIAL AIDE-PYTHON-AGNT (THIS SHOULD BE DOWNLOADED FROM GITHUB LINK ONLY):
 
 
+OPEN THIS LINK IN BROWSER:
 
 https://wwwin-github.cisco.com/AIDE/aide-python-agent
 
 
 
 
-Click on the breen button "CODE" >> "Download ZIP"
-Unzip the downloaded folde, delete the ZIP folder.
+Click on the breen button "CODE" , and then select the option "Download ZIP"
+Unzip the downloaded ZIP folder. We now have the unzipped folder. Delete the ZIP folder.
 Use the Command prompt to install the aide-python-agent.
 
 
+Open command prompt and type:
 
 set PBR_VERSION=4.1.0 
 pip install <your aide-python-agent directory>
 
+NOTE:
+DO NOT TYPE "pip install aide" in command prompt, as it will download some other aide python moodule which was made by MIT college student in US.
+
 
 
 
@@ -72,9 +80,7 @@ pip install <your aide-python-agent directory>
 ===================================================
 
 
-
-
-execute the python automation file.
+execute the python automation file, through cmd prompt:
 
 cd <The directory where DAV report python file is>
 
@@ -88,7 +94,9 @@ python Python-code-based-on-months.py
 
 
 
+A UI will appear in which you need to upload your 6 excel files, and type in the other details. Input all these and click on submit.
+The final output file will be in the same folder as the DAV python automation script is in.
 
-A UI will appear in which you need to upload your 6 excel files, and other details. Input all these and click on submit.
-The final output file will be in the same folder as the DAV python script is in.
+If 4 months needs to be considered for evaluation, then 4-3 = 3 (three) should be the value for months in the UI.
+If 3 months needs to be considered for evaluation, then 3-1 = 2 (two) should be the value for months in the UI.
 
